@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>关闭二维码</title>
+    <meta charset="utf-8">
+    <style>
+        .box {
+            position: relative;
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        img {
+            width: 80px;
+            margin-top: 10px;
+        }
+
+        .close {
+            width: 20px;
+            position: absolute;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            right: -22px;
+            top: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="xxx.png" alt="二维码">
+        <i class="close">×</i>
+    </div>
+    <script>
+        var btn = document.querySelector('.close');
+        var div = document.querySelector('.box');
+        // 注册点击事件
+        btn.onclick = function () {
+            div.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

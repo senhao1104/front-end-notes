@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>显示和隐藏输入框内容</title>
+    <meta charset="utf-8">
+    <style>
+        #name {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="name" value="姓名">
+    <script>
+        var text = document.getElementById('name');
+        // 获得焦点事件
+        text.onfocus = function () {
+            if (this.value === '姓名') {
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+        // 失去焦点事件
+        text.onblur = function () {
+            if (this.value === '') {
+                this.value = '姓名';
+            }
+            this.style.color = '#ccc';
+        }
+    </script>
+</body>
+
+</html>

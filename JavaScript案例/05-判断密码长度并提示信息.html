@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>判断密码长度并提示信息</title>
+    <meta charset="utf-8">
+    <style>
+        .box {
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        .msg {
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        .right {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="password" class="pwd">
+        <p class="msg">请输入6~16位密码</p>
+    </div>
+    <script>
+        var pwd = document.querySelector('.pwd');
+        var msg = document.querySelector('.msg');
+        // 失去焦点事件
+        pwd.onblur = function () {
+            // 判断密码长度
+            if (pwd.value.length < 6 || pwd.value.length > 16) {
+                msg.innerHTML = "密码长度不符合要求！";
+                msg.className = 'msg wrong';
+            } else {
+                msg.innerHTML = "密码长度符合要求！";
+                msg.className = 'msg right';
+            }
+        }
+    </script>
+</body>
+
+</html>
