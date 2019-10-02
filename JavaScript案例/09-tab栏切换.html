@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tab栏切换</title>
+    <meta charset="utf-8">
+    <style>
+        .tab {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            line-height: 40px;
+            list-style-type: none;
+            text-align: center;
+            float: left;
+            padding: 0 20px;
+            cursor: pointer;
+
+        }
+
+        .tab_list {
+            width: 560px;
+            height: 40px;
+            background-color: #f1f1f1;
+        }
+
+        .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（1000+）</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价模块内容
+            </div>
+
+        </div>
+        <script>
+            var lis = document.querySelectorAll('li');
+            var items = document.querySelectorAll('.item');
+            // 改变选项卡状态（排他思想）
+            for (var i = 0; i < lis.length; i++) {
+                // 给每个li 设置索引号 
+                lis[i].setAttribute('index', i);
+                // 注册点击事件
+                lis[i].onclick = function () {
+                    for (var i = 0; i < lis.length; i++) {
+                        lis[i].className = '';
+                    }
+                    this.className = 'current';
+                    // 取得当前索引号
+                    var index = this.getAttribute('index');
+                    for (var i = 0; i < items.length; i++) {
+                        items[i].style.display = 'none';
+                    }
+                    items[index].style.display = 'block';
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>全选和反选</title>
+    <meta charset="utf-8">
+    <style>
+        table {
+            margin: 100px auto;
+            width: 300px;
+            text-align: center;
+            border-collapse: collapse
+        }
+
+        th {
+            background-color: skyblue;
+        }
+
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" class="b_all"></th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="b_others"></td>
+                <td>iphonex</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="b_others"></td>
+                <td>ipad</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="b_others"></td>
+                <td>macbook</td>
+                <td>10000</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var b_all = document.querySelector('.b_all');
+        var b_others = document.querySelectorAll('.b_others');
+        // 注册（全选）点击事件
+        b_all.onclick = function () {
+            // 得到当前复选框的选中状态
+            console.log(this.checked);
+            for (var i = 0; i < b_others.length; i++) {
+                b_others[i].checked = this.checked;
+            }
+        }
+        // 注册其他（多选框）点击事件
+        for (var i = 0; i < b_others.length; i++) {
+            b_others[i].onclick = function () {
+                // flag 控制全选按钮是否选中
+                var flag = true;
+                for (var i = 0; i < b_others.length; i++) {
+                    if (!b_others[i].checked) {
+                        flag = false;
+                        // 退出for循环 提高执行效率
+                        break;
+                    }
+                }
+                b_all.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>
