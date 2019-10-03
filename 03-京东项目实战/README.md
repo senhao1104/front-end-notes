@@ -130,3 +130,35 @@ Keywords是页面关键词，是搜索引擎关注点之一。Keywords应该限�
 推荐网站：
 * icomoon字库：http://icomoon.io
 * 阿里iconfont字库：http://www.iconfont.cn
+
+#### 4.字体引入到HTML
+1. 得到压缩包后，将fonts文件夹放入项目根目录下
+2. 打开压缩包中的 demo.html
+3. 选中复制你想要的图标 在span标签之间粘贴
+
+![image](https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-03_22-41-00.jpg)
+
+```html
+<span>   </span>
+```
+#### 5.在样式里面声明字体（注意文件路径）
+
+```css
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?5oyl41');
+    src: url('fonts/icomoon.eot?5oyl41#iefix') format('embedded-opentype'), 
+    url('fonts/icomoon.ttf?5oyl41') format('truetype'), 
+    url('fonts/icomoon.woff?5oyl41') format('woff'), 
+    url('fonts/icomoon.svg?5oyl41#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
+#### 6.给盒子使用字体
+```css
+span {
+    font-family: 'icomoon';
+}
+```
