@@ -7,7 +7,7 @@
 * 开发工具：VSCode Chrome浏览器
 * 技术栈：HTML + CSS
 
-![homepage.png](https://github.com/senhao114/front-end-notes/blob/master/99-images/JD_homepage.png)
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/JD_homepage.png" width = "50%">
 
 ### 目录说明
 
@@ -136,7 +136,7 @@ Keywords是页面关键词，是搜索引擎关注点之一。Keywords应该限�
 2. 打开压缩包中的 demo.html
 3. 选中复制你想要的图标 在span标签之间粘贴
 
-![image](https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-03_22-41-00.jpg)
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-03_22-41-00.jpg" width = "50%">
 
 ```html
 <span>   </span>
