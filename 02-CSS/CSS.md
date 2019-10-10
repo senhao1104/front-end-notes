@@ -98,7 +98,6 @@ font-family: "\5FAE\8F6F\96C5\9ED1"，表示设置字体为“微软雅黑”。
 font-weight属性用于定义字体的粗细，其可用属性值：normal、bold、bolder、lighter、100~900（100的整数倍）。
 
 >小技巧： 
-
 数字 400 等价于 normal，而 700 等价于 bold。  但是我们更喜欢用数字来表示。  
 
 ### font-style:字体风格
@@ -114,7 +113,6 @@ italic：浏览器会显示斜体的字体样式。
 oblique：浏览器会显示倾斜的字体样式。
 
 >小技巧： 
-
 平时我们很少给文字加斜体，反而喜欢给斜体标签（em，i）改为普通模式。
 
 ### font:综合设置字体样式 (重点)
@@ -140,10 +138,9 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 <img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_21-11-48.jpg" width = "50%">
 
 >小技巧：
-
-1. ctrl+滚轮 可以 放大开发者工具代码大小。
-2. 左边是HTML元素结构   右边是CSS样式。
-3. 右边CSS样式可以改动数值和颜色查看更改后效果。
+1.ctrl+滚轮 可以 放大开发者工具代码大小。
+2.左边是HTML元素结构   右边是CSS样式。
+3.右边CSS样式可以改动数值和颜色查看更改后效果。
 
 ## 选择器（重点）
 
@@ -154,8 +151,8 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 标签选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：
 
 ```css
-标签名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }  或者
-元素名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }
+标签名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}  或者
+元素名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}
 ```
 
 标签选择器最大的优点是能快速为页面中同类型的标签统一样式，同时这也是他的缺点，不能设计差异化样式。
@@ -175,12 +172,11 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 类选择器最大的优势是可以为元素对象定义单独或相同的样式。
 
 >小技巧：
-
-* 长名称或词组可以使用中横线来为选择器命名。
-* 不建议使用“_”下划线来命名CSS选择器。
+1.长名称或词组可以使用中横线来为选择器命名。
+2.不建议使用“_”下划线来命名CSS选择器。
 浏览器兼容问题 (比如使用_tips的选择器命名，在IE6是无效的)
 能良好区分JavaScript变量命名(JS变量命名是用“_”)
-* 不要纯数字、中文等命名， 尽量使用英文字母来表示。
+3.不要纯数字、中文等命名， 尽量使用英文字母来表示。
 
 >案例：
 
@@ -235,7 +231,7 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：
 
 ```css
-#id名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }
+#id名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}
 ```
 
 该语法中，id名即为HTML元素的id属性值，大多数HTML元素都可以定义id属性，元素的id值是唯一的，只能对应于文档中某一个具体的元素。
@@ -616,134 +612,116 @@ HTML标签一般分为块标签和行内标签两种类型，它们也称块元�
 
 此阶段，我们只需关心这三个，其他的是我们后面的工作。
 
-# CSS复合选择器
+## CSS复合选择器
 
 复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的,目的是为了可以选择更准确更精细的目标元素标签。
 
-## 交集选择器
+### 交集选择器
 
 交集选择器由两个选择器构成，其中第一个为标签选择器，第二个为class选择器，两个选择器之间不能有空格，如h3.special。
 
-<img src="media/jiao.png" />
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_23-11-00.png">
 
-~~~
-比如：   p.one   选择的是： 类名为 .one  的 段落标签。  
-~~~
+比如：p.one 选择的是： 类名为 .one  的 段落 标签。  
 
 用的相对来说比较少，不太建议使用。
 
-## 并集选择器
+### 并集选择器
 
 并集选择器（CSS选择器分组）是各个选择器通过<strong style="color:#f00">逗号</strong>连接而成的，任何形式的选择器（包括标签选择器、class类选择器id选择器等），都可以作为并集选择器的一部分。如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的CSS样式。
 
-<img src="media/bing.png" />
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_23-37-00.png">
 
-~~~
-比如  .one, p , #test {color: #F00;}  表示   .one 和 p  和 #test 这三个选择器都会执行颜色为红色。  通常用于集体声明。
-~~~
+比如  .one, p , #test {color: #F00;}  表示 .one 和 p  和 #test 这三个选择器都会执行颜色为红色。 通常用于集体声明。
 
-
-
-## 后代选择器
+### 后代选择器
 
 后代选择器又称为包含选择器，用来选择元素或元素组的后代，其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。
 
-<img src="media/hou.png" />
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_23-40-00.png">
 
-子孙后代都可以这么选择。 或者说，它能选择任何包含在内 的标签。 
+子孙后代都可以这么选择。 或者说，它能选择任何包含在内的标签。 
 
-
-
-## 子元素选择器
+### 子元素选择器
 
 子元素选择器只能选择作为某元素子元素的元素。其写法就是把父级标签写在前面，子级标签写在后面，中间跟一个 &gt; 进行连接，注意，符号左右两侧各保留一个空格。
 
-<img src="media/zi1.png" />
+<img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_23-43-00.png">
 
-白话：  这里的子 指的是 亲儿子  不包含孙子 重孙子之类。
+这里的子 指的是 儿子  不包含孙子 重孙子之类。
 
-~~~
- 比如：  .demo > h3 {color: red;}   说明  h3 一定是demo 亲儿子。  demo 元素包含着h3。
-~~~
+比如：.demo > h3 {color: red;}   说明  h3 一定是demo 的儿子、demo 元素包含着h3。
 
+### 属性选择器
 
+选取标签带有某些特殊属性的选择器 我们成为属性选择器。
 
-## 测试题
+<table>
+  <tr>
+    <th>选择器</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td>[attribute]</td>
+    <td>用于选取带有指定属性的元素。</td>
+  </tr>
+  <tr>
+    <td>[attribute=value]</td>
+    <td>用于选取带有指定属性和值的元素。</td>
+  </tr>
+  <tr>
+    <td>[attribute~=value]</td>
+    <td>用于选取属性值中包含指定词汇的元素。</td>
+  </tr>
+  <tr>
+    <td>[attribute|=value]</td>
+    <td>用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</td>
+  </tr>
+  <tr>
+    <td>[attribute^=value]</td>
+    <td>匹配属性值以指定值开头的每个元素。</td>
+  </tr>
+  <tr>
+    <td>[attribute$=value]	</td>
+    <td>匹配属性值以指定值结尾的每个元素。</td>
+  </tr>
+  <tr>
+    <td>[attribute*=value]</td>
+    <td>匹配属性值中包含指定值的每个元素。</td>
+  </tr>
+</table>
 
-```html
-<div class="nav">    <!-- 主导航栏 -->
-  <ul>
-    <li><a href="#">公司首页</a></li>
-	<li><a href="#">公司简介</a></li>
-	<li><a href="#">公司产品</a></li>
-	<li>
-         <a href="#">联系我们</a>
-		 <ul>
-		    		<li><a href="#">公司邮箱</a></li>
-		    		<li><a href="#">公司电话</a></li>
-		 </ul>
-	</li>
-  </ul>
-</div>
-<div class="sitenav">    <!-- 侧导航栏 -->
-  <div class="site-l">左侧侧导航栏</div>
-  <div class="site-r"><a href="#">登录</a></div>
-</div>
+```css
+/* 获取到 拥有 该属性的元素 */
+div[class^=font] {
+  /* class^=font 表示 font 开始位置就行了 */
+  color: pink;
+}
+div[class$=footer] { 
+  /* class$=footer 表示 footer 结束位置就行了 */
+  color: skyblue;
+}
+div[class*=tao] { 
+  /* class*=tao  *=  表示tao 在任意位置都可以 */
+  color: green;
+}
 ```
 
-在不修改以上代码的前提下，完成以下任务：
+```html
+<div class="font12">属性选择器</div>
+<div class="font12">属性选择器</div>
+<div class="font24">属性选择器</div>
+<div class="font24">属性选择器</div>
+<div class="font24">属性选择器</div>
+<div class="24font">属性选择器123</div>
+<div class="sub-footer">属性选择器footer</div>
+<div class="jd-footer">属性选择器footer</div>
+<div class="news-tao-nav">属性选择器</div>
+<div class="news-tao-header">属性选择器</div>
+<div class="tao-header">属性选择器</div>
+```
 
-1. 链接 登录 的颜色为红色,同时主导航栏里面的所有的链接改为蓝色     (简单)
-
-2. 主导航栏和侧导航栏里面文字都是14像素并且是微软雅黑。（中等)
-
-3. 主导航栏里面的一级菜单链接文字颜色为绿色。（难)
-
-   
-
-## 属性选择器
-
-选取标签带有某些特殊属性的选择器 我们成为属性选择器
-
-| **选择器**   | **含义**                                                |
-|--------------|---------------------------------------------------------|
-| E[attr]      | 存在attr属性即可                                        |
-| E[attr\      | =val]|选择attr属性的值是 `val` 或值以 `val-` 开头的元素 |
-| E[attr=val]  | 属性值完全等于val                                       |
-| E[attr^=val] | 属性值里面包含val字符并且在“开始”位置                   |
-| E[attr$=val] | 属性值里面包含val字符并且在“结束”位置                   |
-| E[attr*=val] | 属性值里面包含val字符并且在“任意”位置                   |
-
-
-
-~~~css
-/* 获取到 拥有 该属性的元素 */
-div[class^=font] { /*  class^=font 表示 font 开始位置就行了 */
-			color: pink;
-		}
-div[class$=footer] { /*  class$=footer 表示 footer 结束位置就行了 */
-			color: skyblue;
-		}
-div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */
-			color: green;
-		}
-~~~
-
-~~~html
-	<div class="font12">属性选择器</div>
-    <div class="font12">属性选择器</div>
-    <div class="font24">属性选择器</div>
-    <div class="font24">属性选择器</div>
-    <div class="font24">属性选择器</div>
-    <div class="24font">属性选择器123</div>
-    <div class="sub-footer">属性选择器footer</div>
-    <div class="jd-footer">属性选择器footer</div>
-    <div class="news-tao-nav">属性选择器</div>
-    <div class="news-tao-header">属性选择器</div>
-    <div class="tao-header">属性选择器</div>
-~~~
-
-### 存在和值（Presence and value）属性选择器节
+#### 存在和值（Presence and value）属性选择器节
 这些属性选择器尝试匹配精确的属性值：
 
 - [attr]：该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。
@@ -752,7 +730,7 @@ div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */
 
 让我们看一个特别的例子，下面是它的的HTML代码： 
 
-```
+```html
 我的食谱配料: <i lang="fr-FR">Poulet basquaise</i>
 <ul>
   <li data-quantity="1kg" data-vegetable>Tomatoes</li>
@@ -766,13 +744,9 @@ div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */
 </ul>
 ```
 
-
-
-
-
 和一个简单的样式表：
 
-```
+```css
 /* 所有具有"data-vegetable"属性的元素将被应用绿色的文本颜色 */
 [data-vegetable] {
   color: green
@@ -790,15 +764,13 @@ div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */
 }
 ```
 
+### 伪元素选择器（CSS3)
 
+* E::first-letter文本的第一个单词或字（如中文、日文、韩文等）
+* E::first-line 文本第一行
+* E::selection 可改变选中文本的样式
 
-## 伪元素选择器（CSS3)
-
-1. E::first-letter文本的第一个单词或字（如中文、日文、韩文等）
-2. E::first-line 文本第一行；
-3. E::selection 可改变选中文本的样式；
-
-~~~css
+```css
 p::first-letter {
   font-size: 20px;
   color: hotpink;
@@ -813,36 +785,32 @@ p::selection {
   /* font-size: 50px; */
   color: orange;
 }
-~~~
+```
 
-
-
-4、E::before和E::after
+* E::before和E::after
 
 在E元素内部的开始位置和结束位创建一个元素，该元素为行内元素，且必须要结合content属性使用。
 
-~~~css
-div::befor {
+```css
+div::before {
   content:"开始";
 }
 div::after {
   content:"结束";
 }
-~~~
-
-
+```
 
 E:after、E:before 在旧版本里是伪元素，CSS3的规范里“:”用来表示伪类，“::”用来表示伪元素，但是在高版本浏览器下E:after、E:before会被自动识别为E::after、E::before，这样做的目的是用来做兼容处理。
 
-E:after、E:before后面的练习中会反复用到，目前只需要有个大致了解
+E:after、E:before后面的练习中会反复用到，目前只需要有个大致了解。
 
 ":" 与 "::" 区别在于区分伪类和伪元素
 
-# CSS书写规范
+## CSS书写规范
 
 开始就形成良好的书写规范，是你专业化的开始。
 
-## 空格规范
+### 空格规范
 
 【强制】 选择器 与 { 之间必须包含空格。
 
@@ -854,20 +822,19 @@ E:after、E:before后面的练习中会反复用到，目前只需要有个大�
 
 font-size: 12px;
 
-## 选择器规范
+### 选择器规范
 
 【强制】 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。
 
 示例：
 
-```
+```css
 /* 正例 */
 .post,
 .page,
 .comment {
     line-height: 1.5;
 }
-
 
 /* 反例 */
 .post, .page, .comment {
@@ -879,30 +846,30 @@ font-size: 12px;
 
 示例：
 
-```
-/* good */
+```css
+/* 正例 */
 #username input {}
 .comment .avatar {}
 
-/* bad */
+/* 反例 */
 .page .header .login #username input {}
 .comment div * {}
 ```
 
-## 属性规范
+### 属性规范
 
 【强制】 属性定义必须另起一行。
 
 示例：
 
-```
-/* good */
+```css
+/* 正例 */
 .selector {
     margin: 0;
     padding: 0;
 }
 
-/* bad */
+/* 反例 */
 .selector { margin: 0; padding: 0; }
 ```
 
@@ -910,19 +877,19 @@ font-size: 12px;
 
 示例：
 
-```
-/* good */
+```css
+/* 正例 */
 .selector {
     margin: 0;
 }
 
-/* bad */
+/* 反例 */
 .selector {
     margin: 0
 }
 ```
 
-# CSS 背景(background)
+## CSS 背景(background)
 
 CSS 可以添加背景颜色和背景图片，以及来进行图片设置。
 
@@ -932,16 +899,20 @@ CSS 可以添加背景颜色和背景图片，以及来进行图片设置。
 | background-repeat                                           | 是否平铺         |
 | background-position                                         | 背景位置         |
 | background-attachment                                       | 背景固定还是滚动 |
-| 背景的合写（复合属性）                                      |                  |
-| background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置 |                  |
 
-## 背景图片(image)
+背景的合写（复合属性）
+
+```css                                       
+background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置 
+```
+
+### 背景图片(image)
 
 语法： 
 
-~~~css
+```css
 background-image : none | url (url) 
-~~~
+```
 
 参数： 
 
@@ -950,15 +921,16 @@ url : 　使用绝对或相对地址指定背景图像
 
 background-image 属性允许指定一个图片展示在背景中（只有CSS3才可以多背景）可以和 background-color 连用。 如果图片不重复地话，图片覆盖不到地地方都会被背景色填充。 如果有背景图片平铺，则会覆盖背景颜色。
 
-小技巧：  我们提倡 背景图片后面的地址，url不要加引号。
+>小技巧：  
+我们提倡 背景图片后面的地址，url不要加引号。
 
-## 背景平铺（repeat）
+### 背景平铺（repeat）
 
 语法： 
 
-~~~css
+```css
 background-repeat : repeat | no-repeat | repeat-x | repeat-y 
-~~~
+```
 
 参数： 
 
@@ -970,27 +942,19 @@ repeat-x : 　背景图像在横向上平铺
 
 repeat-y : 　背景图像在纵向平铺 
 
-设置背景图片时，默认把图片在垂直方向平铺以铺满整个元素。
-
-<img src="media/y.png" width="600"/>
-
-设置背景图片时，默认把图片在水平和垂直方向平铺以铺满整个元素。
-
-<img src="media/q.png" width="600"/>
-
-## 背景位置(position)
+### 背景位置(position)
 
 语法： 
 
-~~~css
+```css
 background-position : length || length
 
 background-position : position || position 
-~~~
+```
 
 参数： 
 
-length : 　百分数 | 由浮点数字和单位标识符组成的长度值。请参阅长度单位 
+length : 　百分数 | 由浮点数字和单位标识符组成的长度值。
 position : 　top | center | bottom | left | center | right 
 
 说明： 
@@ -1005,122 +969,64 @@ position : 　top | center | bottom | left | center | right
 
 实际工作用的最多的，就是背景图片居中对齐了。
 
-## 背景附着
+### 背景附着
 
 设置或检索背景图像是随对象内容滚动还是固定的。
 
 语法： 
 
-~~~css
+```css
 background-attachment : scroll | fixed 
-~~~
+```
 
 参数： 
 
 scroll : 　背景图像是随对象内容滚动
 fixed : 　背景图像固定 
 
-## 背景简写
+### 背景简写
 
 background属性的值的书写顺序官方并没有强制标准的。为了可读性，建议大家如下写：
 
 background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置
 
-~~~css
+```css
 background: transparent url(image.jpg) repeat-y  scroll 50% 0 ;
-~~~
+```
 
-
-
-## 背景透明(CSS3)
+### 背景透明(CSS3)
 
 CSS3支持背景半透明的写法语法格式是:
 
-~~~css
+```css
 background: rgba(0,0,0,0.3);
-~~~
+```
 
- 最后一个参数是alpha 透明度  取值范围 0~1之间
+最后一个参数是alpha 透明度  取值范围 0~1之间
 
- 注意：  背景半透明是指盒子背景半透明， 盒子里面的内容不收影响。
+>注意：背景半透明是指盒子背景半透明， 盒子里面的内容不收影响。
 
-
-
-## 背景缩放(CSS3)
+### 背景缩放(CSS3)
 
 通过background-size设置背景图片的尺寸，就像我们设置img的尺寸一样，在移动Web开发中做屏幕适配应用非常广泛。
 
 其参数设置如下：
 
-a) 可以设置长度单位(px)或百分比（设置百分比时，参照盒子的宽高；设置px的时候，尽量之改一个值，防止失真，改的那个值是宽度）
+1. 可以设置长度单位(px)或百分比（设置百分比时，参照盒子的宽高；设置px的时候，尽量之改一个值，防止失真，改的那个值是宽度）
+2. 设置为cover时，会自动调整缩放比例，保证图片始终填充满背景区域，如有溢出部分则会被隐藏。
+**我们平时用的cover 最多**
+3. 设置为contain会自动调整缩放比例，保证图片始终完整显示在背景区域。
 
-b) 设置为cover时，会自动调整缩放比例，保证图片始终填充满背景区域，如有溢出部分则会被隐藏。**我们平时用的cover 最多**
-
-c) 设置为contain会自动调整缩放比例，保证图片始终完整显示在背景区域。
-
-~~~css
+```css
 background-image: url('images/gyt.jpg');
 			background-size: 300px 100px;
 			/* background-size: contain; */
 			/* background-size: cover; */
-~~~
+```
 
+### 导航栏案例
 
-
-## 多背景(CSS3)
-
-以逗号分隔可以设置多背景，可用于自适应布局  做法就是 用逗号隔开就好了。
-
-- 一个元素可以设置多重背景图像。 
-- 每组属性间使用逗号分隔。 
-- 如果设置的多重背景图之间存在着交集（即存在着重叠关系），前面的背景图会覆盖在后面的背景图之上。
-- 为了避免背景色将图像盖住，背景色通常都定义在最后一组上，
-
-~~~css
-background:url(test1.jpg) no-repeat scroll 10px 20px/50px 60px  ,
-	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px ,
-	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px c #aaa;
-~~~
-
-
-
-## 凹凸文字
-
-~~~css
-<head>
-        <meta charset="utf-8">
-        <style>
-        body {
-        	background-color: #ccc;
-        }
-		div {
-			color: #ccc;
-			font: 700 80px "微软雅黑";
-		}
-		div:first-child {
-			/* text-shadow: 水平位置  垂直位置  模糊距离 阴影颜色; */
-			text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
-		}
-		div:last-child {
-			/* text-shadow: 水平位置  垂直位置  模糊距离 阴影颜色; */
-			text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
-		}
-
-        </style>
-    </head>
-    <body>
-    <div>我是凸起的文字</div>
-    <div>我是凹下的文字</div>
-    </body>
-~~~
-
-![1498467533412](media/1498467533412.png)
-
-
-
-## 导航栏案例
-
-### 文本的装饰
+#### 文本的装饰
 
 text-decoration   通常我们用于给链接修改装饰效果
 
@@ -1133,38 +1039,36 @@ text-decoration   通常我们用于给链接修改装饰效果
 
 **使用技巧**：在一行内的盒子内，我们设定行高等于盒子的高度，就可以使文字垂直居中。
 
-~~~html
+```html
 <head>
-        <meta charset="utf-8">
-        <style>
-		body {
-			background-color: #000;
-		}
-		a {
-			width: 200px;
-			height: 50px;
-			/* background-color: orange; */
-			display: inline-block;  /* 把a 行内元素转换为行内块元素 */
-			text-align: center;  /* 文字水平居中 */
-			line-height: 50px;  /* 我们设定行高等于盒子的高度，就可以使文字垂直居中 */
-			color: #fff;
-			font-size: 22px;
-			text-decoration: none;  /* 取消下划线 文本装饰 */
-		}
-		a:hover {  /* 鼠标经过 给我们的链接添加背景图片*/
-			background: url(images/h.png) no-repeat; 
-		}
-        </style>
-    </head>
-    <body>
-    <a href="#">专区说明</a>
-    <a href="#">申请资格</a>
-    <a href="#">兑换奖励</a>
-    <a href="#">下载游戏</a>
-    </body>
-~~~
-
-
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #000;
+    }
+    a {
+      width: 200px;
+      height: 50px;
+      /* background-color: orange; */
+      display: inline-block;  /* 把a 行内元素转换为行内块元素 */
+      text-align: center;  /* 文字水平居中 */
+      line-height: 50px;  /* 我们设定行高等于盒子的高度，就可以使文字垂直居中 */
+      color: #fff;
+      font-size: 22px;
+      text-decoration: none;  /* 取消下划线 文本装饰 */
+      }
+    a:hover {  /* 鼠标经过 给我们的链接添加背景图片*/
+      background: url(images/h.png) no-repeat; 
+    }
+  </style>
+</head>
+<body>
+  <a href="#">专区说明</a>
+  <a href="#">申请资格</a>
+  <a href="#">兑换奖励</a>
+  <a href="#">下载游戏</a>
+</body>
+```
 
 # CSS 三大特性
 
@@ -2892,11 +2796,7 @@ transform:rotate(45deg);
    ```
    transform-origin: top right;		/* 设置旋转的中心点 */
    ```
-
-   
-
-   
-
+   å
 案例旋转扑克牌
 
 ~~~css
@@ -3247,8 +3147,6 @@ body {
 }
 ~~~
 
-
-
 ## 动画(CSS3)
 
 动画是CSS3中具有颠覆性的特征之一，可通过设置多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果。
@@ -3307,10 +3205,6 @@ img {
 }
 ~~~
 
-
-
-
-
 ## 伸缩布局(CSS3)
 
 CSS3在布局方面做了非常大的改进，使得我们对块级元素的布局排列变得十分灵活，适应性非常强，其强大的伸缩性，在响应式开中可以发挥极大的作用。
@@ -3325,11 +3219,7 @@ CSS3在布局方面做了非常大的改进，使得我们对块级元素的布�
 
 ![1498441839910](media/1498441839910.png)
 
-
-
 Flex布局的语法规范经过几年发生了很大的变化，也给Flexbox的使用带来一定的局限性，因为语法规范版本众多，浏览器支持不一致，致使Flexbox布局使用不多
-
-
 
 ### 各属性详解
 
@@ -3345,12 +3235,9 @@ flex-direction: column 垂直排列
 
 flex-direction: row  水平排列
 
-
-
 #### 案例
 
 http://m.ctrip.com/html5/   携程网手机端地址
-
 
 
 ### justify-content调整主轴对齐（水平对齐）
@@ -3366,7 +3253,6 @@ http://m.ctrip.com/html5/   携程网手机端地址
 | space-around  | 项目位于各行之前、之间、之后都留有空白的容器内。 | 相当于给每个盒子添加了左右margin外边距         |
 
 
-
 ### align-items调整侧轴对齐（垂直对齐）
 
 子盒子如何在父盒子里面垂直对齐（单行）
@@ -3377,8 +3263,6 @@ http://m.ctrip.com/html5/   携程网手机端地址
 | center     | 项目位于容器的中心。           | 垂直居中                                              |
 | flex-start | 项目位于容器的开头。           | 垂直对齐开始位置 上对齐                               |
 | flex-end   | 项目位于容器的结尾。           | 垂直对齐结束位置 底对齐                               |
-
-
 
 ### flex-wrap控制是否换行
 
