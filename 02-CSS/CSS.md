@@ -33,7 +33,7 @@ css3提供了 calc() = calc(四则运算)用于动态计算长度值。
 
 ## CSS字体样式属性
 
-### font-size:字号大小
+### font-size: 字号大小
 
 font-size属性用于设置字号，该属性的值可以使用相对长度单位，也可以使用绝对长度单位。其中，相对长度单位比较常用，推荐使用像素单位px，绝对长度单位使用较少。具体如下：
 
@@ -46,12 +46,12 @@ font-size属性用于设置字号，该属性的值可以使用相对长度单�
 | mm           | 毫米                           |
 | pt           | 点                             |
 
-### font-family:字体
+### font-family: 字体
 
 font-family属性用于设置字体。网页中常用的字体有宋体、微软雅黑、黑体等，例如将网页中所有段落文本的字体设置为微软雅黑，可以使用如下CSS样式代码：
 
 ```css
-p { font-family:"微软雅黑";}
+p { font-family: "微软雅黑";}
 ```
 
 可以同时指定多个字体，中间以逗号隔开，表示如果浏览器不支持第一个字体，则会尝试下一个，直到找到合适的字体。
@@ -69,7 +69,7 @@ p { font-family:"微软雅黑";}
 
 在 CSS 中设置字体名称，直接写中文是可以的。但是在文件编码（GB2312、UTF-8 等）不匹配时会产生乱码的错误。xp 系统不支持 类似微软雅黑的中文。
 
-方案一： 你可以使用英文来替代。 比如 font-family:"Microsoft Yahei"。
+方案一： 你可以使用英文来替代。 比如 font-family: "Microsoft Yahei"。
 
 方案二： 在 CSS 直接使用 Unicode 编码来写字体名称可以避免这些错误。使用 Unicode 写中文字体名称，浏览器是可以正确的解析的。
 font-family: "\5FAE\8F6F\96C5\9ED1"，表示设置字体为“微软雅黑”。
@@ -91,7 +91,7 @@ font-family: "\5FAE\8F6F\96C5\9ED1"，表示设置字体为“微软雅黑”。
 
 为了照顾不同电脑的字体安装问题，我们尽量只使用宋体和微软雅黑中文字体。
 
-### font-weight:字体粗细
+### font-weight: 字体粗细
 
 字体加粗除了用 b  和 strong 标签之外，可以使用CSS 来实现，但是CSS 是没有语义的。
 
@@ -100,22 +100,22 @@ font-weight属性用于定义字体的粗细，其可用属性值：normal、bol
 >小技巧： 
 数字 400 等价于 normal，而 700 等价于 bold。  但是我们更喜欢用数字来表示。  
 
-### font-style:字体风格
+### font-style: 字体风格
 
 字体倾斜除了用 i  和 em 标签之外，可以使用CSS 来实现，但是CSS 是没有语义的。
 
 font-style属性用于定义字体风格，如设置斜体、倾斜或正常字体，其可用属性值如下：
 
-normal：默认值，浏览器会显示标准的字体样式。
+normal: 默认值，浏览器会显示标准的字体样式。
 
-italic：浏览器会显示斜体的字体样式。
+italic: 浏览器会显示斜体的字体样式。
 
-oblique：浏览器会显示倾斜的字体样式。
+oblique: 浏览器会显示倾斜的字体样式。
 
 >小技巧： 
 平时我们很少给文字加斜体，反而喜欢给斜体标签（em，i）改为普通模式。
 
-### font:综合设置字体样式 (重点)
+### font: 综合设置字体样式 (重点)
 
 font属性用于对字体样式进行综合设置，其基本语法格式如下：
 
@@ -151,8 +151,8 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 标签选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：
 
 ```css
-标签名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}  或者
-元素名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}
+标签名 {属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3;}  或者
+元素名 {属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3;}
 ```
 
 标签选择器最大的优点是能快速为页面中同类型的标签统一样式，同时这也是他的缺点，不能设计差异化样式。
@@ -162,7 +162,7 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 类选择器使用“.”（英文点号）进行标识，后面紧跟类名，其基本语法格式如下：
 
 ```css
-.类名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }
+.类名{属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3; }
 ```
 
 ```css
@@ -230,7 +230,7 @@ font属性用于对字体样式进行综合设置，其基本语法格式如下�
 id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：
 
 ```css
-#id名 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}
+#id名 {属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3;}
 ```
 
 该语法中，id名即为HTML元素的id属性值，大多数HTML元素都可以定义id属性，元素的id值是唯一的，只能对应于文档中某一个具体的元素。
@@ -252,7 +252,7 @@ id选择器 好比人的身份证号码，全中国是唯一的、不得重复�
 通配符选择器用“*”号表示，他是所有选择器中作用范围最广的，能匹配页面中所有的元素。其基本语法格式如下：
 
 ```css
-* { 属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }
+* { 属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3; }
 ```
 
 例如下面的代码，使用通配符选择器定义CSS样式，清除所有HTML标记的默认边距。
@@ -296,11 +296,11 @@ a:hover {
 
 #### 2.结构(位置)伪类选择器（CSS3)
 
-- :first-child :选取属于其父元素的首个子元素的指定选择器
-- :last-child :选取属于其父元素的最后一个子元素的指定选择器
-- :nth-child(n) ： 匹配属于其父元素的第 N 个子元素，不论元素的类型
-- :nth-of-type(n)： 简单来说nth-of-type会忽略其它标签的顺序而安装标签自身种类的顺序进行筛选，也就是选择的参照点并不是DOM数，而是自身。
-- :nth-last-child(n) ：选择器匹配属于其元素的第 N 个子元素的每个元素，不论元素的类型，从最后一个子元素开始计数。
+- :first-child: 选取属于其父元素的首个子元素的指定选择器
+- :last-child: 选取属于其父元素的最后一个子元素的指定选择器
+- :nth-child(n): 匹配属于其父元素的第 N 个子元素，不论元素的类型
+- :nth-of-type(n): 简单来说nth-of-type会忽略其它标签的顺序而安装标签自身种类的顺序进行筛选，也就是选择的参照点并不是DOM数，而是自身。
+- :nth-last-child(n): 选择器匹配属于其元素的第 N 个子元素的每个元素，不论元素的类型，从最后一个子元素开始计数。
   n 可以是数字、关键词或公式
 
 ```css
@@ -371,7 +371,7 @@ nth-child(n) 选择器匹配属于其父元素的第 n 个子元素。
 
 ##### nth-of-type与nth-child的区别
 
-nth-of-child：
+nth-of-child:
 
 ​它的属性就是按照所有类型标签的所谓整体队列进行排序筛选，也就是说不论你是h1，span还是p标签，使用这个属性你要遵循在DOM树中的顺序来进行操作。
 
@@ -404,7 +404,7 @@ p {
 
 ## CSS外观属性
 
-### color:文本颜色
+### color: 文本颜色
 
 color属性用于定义文本的颜色，其取值方式有如下3种：
 
@@ -416,31 +416,31 @@ color属性用于定义文本的颜色，其取值方式有如下3种：
 
 > 需要注意的是，如果使用RGB代码的百分比颜色值，取值为0时也不能省略百分号，必须写为0%。
 
-### line-height:行间距（行高）
+### line-height: 行间距（行高）
 
 line-height属性用于设置行间距，就是行与行之间的距离，即字符的垂直间距，一般称为行高。line-height常用的属性值单位有三种，分别为像素px，相对值em和百分比%，实际工作中使用最多的是像素px。
 
 >一般情况下，行距比字号大7、8像素左右就可以了。
 
-### text-align:水平对齐方式
+### text-align: 水平对齐方式
 
 text-align属性用于设置文本内容的水平对齐，相当于html中的align对齐属性。其可用属性值如下：
 
-* left：左对齐（默认值）
-* right：右对齐
-* center：居中对齐
+* left: 左对齐（默认值）
+* right: 右对齐
+* center: 居中对齐
 
-### text-indent:首行缩进
+### text-indent: 首行缩进
 
 text-indent属性用于设置首行文本的缩进，其属性值可为不同单位的数值、em字符宽度的倍数、或相对于浏览器窗口宽度的百分比%，允许使用负值, 建议使用em作为设置单位。
 
 1em 就是一个字的宽度。如果是汉字的段落，1em 就是一个汉字的宽度。
 
-### letter-spacing:字间距
+### letter-spacing: 字间距
 
 letter-spacing属性用于定义字间距，所谓字间距就是字符与字符之间的空白。其属性值可为不同单位的数值，允许使用负值，默认为normal。
 
-### word-spacing:单词间距
+### word-spacing: 单词间距
 
 word-spacing属性用于定义英文单词之间的间距，对中文字符无效。和 letter-spacing 一样，其属性值可为不同单位的数值，允许使用负值，默认为normal。
 
@@ -464,7 +464,7 @@ color: rgba(0,0,0,0.3)
 以后我们可以给我们的文字添加阴影效果了  shadow  影子  
 
 ```css
-text-shadow:水平位置 垂直位置 模糊距离 阴影颜色;
+text-shadow: 水平位置 垂直位置 模糊距离 阴影颜色;
 ```
 | 值            | 说明                       |
 |--------------|--------------------------- |
@@ -494,7 +494,7 @@ CSS可以写到那个位置？ 是不是一定写到html文件里面呢？
 ```html
 <head>
 <style type="text/css">
-    选择器 {属性1:属性值1; 属性2:属性值2; 属性3:属性值3;}
+    选择器 {属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3;}
 </style>
 </head>
 ```
@@ -508,7 +508,7 @@ type="text/css"  在html5中可以省略， 写上也比较符合规范， 所�
 内联样式，又有人称行内样式、行间样式、内嵌样式。是通过标签的style属性来设置元素的样式，其基本语法格式如下：
 
 ```html
-<标签名 style="属性1:属性值1; 属性2:属性值2; 属性3:属性值3;"> 内容 </标签名>
+<标签名 style="属性1: 属性值1; 属性2: 属性值2; 属性3: 属性值3;"> 内容 </标签名>
 ```
 
 语法中style是标签的属性，实际上任何HTML标签都拥有style属性，用来设置行内式。其中属性和值的书写规范与CSS样式规则相同，行内式只对其所在的标签及嵌套在其中的子标签起作用。
@@ -525,9 +525,9 @@ type="text/css"  在html5中可以省略， 写上也比较符合规范， 所�
 
 该语法中，link标签需要放在head头部标签中，并且必须指定link标签的三个属性，具体如下：
 
-* href：定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径。
-* type：定义所链接文档的类型，在这里需要指定为“text/css”，表示链接的外部文件为CSS样式表。
-* rel：定义当前文档与被链接文档之间的关系，在这里需要指定为“stylesheet”，表示被链接的文档是一个样式表文件。
+* href: 定义所链接外部样式表文件的URL，可以是相对路径，也可以是绝对路径。
+* type: 定义所链接文档的类型，在这里需要指定为“text/css”，表示链接的外部文件为CSS样式表。
+* rel: 定义当前文档与被链接文档之间的关系，在这里需要指定为“stylesheet”，表示被链接的文档是一个样式表文件。
 
 ### 三种样式表总结
 
@@ -548,7 +548,7 @@ HTML标签一般分为块标签和行内标签两种类型，它们也称块元�
 每个块元素通常都会独自占据一整行或多整行，可以对其设置宽度、高度、对齐等属性，常用于网页布局和网页结构的搭建。
 
 ```html
-常见的块元素有:<h1>~<h6>、<p>、<div>、<ul>、<ol>、<li>等，其中<div>标签是最典型的块元素。
+常见的块元素有: <h1>~<h6>、<p>、<div>、<ul>、<ol>、<li>等，其中<div>标签是最典型的块元素。
 ```
 块级元素的特点：
 
@@ -604,9 +604,9 @@ HTML标签一般分为块标签和行内标签两种类型，它们也称块元�
 
 ### 标签显示模式转换 display
 
-块转行内：display:inline;
+块转行内: display: inline;
 
-行内转块：display:block;
+行内转块: display: block;
 
 块、行内元素转换为行内块： display: inline-block;
 
@@ -724,9 +724,9 @@ div[class*=tao] {
 #### 存在和值（Presence and value）属性选择器节
 这些属性选择器尝试匹配精确的属性值：
 
-- [attr]：该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。
-- [attr=val]：该选择器仅选择 attr 属性被赋值为 val 的所有元素。
-- [attr~=val]：该选择器仅选择具有 attr 属性的元素，而且要求 val 值是 attr 值包含的被空格分隔的取值列表里中的一个。
+- [attr]: 该选择器选择包含 attr 属性的所有元素，不论 attr 的值为何。
+- [attr=val]: 该选择器仅选择 attr 属性被赋值为 val 的所有元素。
+- [attr~=val]: 该选择器仅选择具有 attr 属性的元素，而且要求 val 值是 attr 值包含的被空格分隔的取值列表里中的一个。
 
 让我们看一个特别的例子，下面是它的的HTML代码： 
 
@@ -912,13 +912,13 @@ background: 背景颜色 背景图片地址 背景平铺 背景滚动 背景位�
 语法： 
 
 ```css
-background-image : none | url (url) 
+background-image: none | url (url) 
 ```
 
 参数： 
 
 none: 无背景图（默认的）
-url : 使用绝对或相对地址指定背景图像 
+url: 使用绝对或相对地址指定背景图像 
 
 background-image 属性允许指定一个图片展示在背景中（只有CSS3才可以多背景）可以和 background-color 连用。 如果图片不重复地话，图片覆盖不到地地方都会被背景色填充。 如果有背景图片平铺，则会覆盖背景颜色。
 
@@ -930,33 +930,33 @@ background-image 属性允许指定一个图片展示在背景中（只有CSS3�
 语法： 
 
 ```css
-background-repeat : repeat | no-repeat | repeat-x | repeat-y 
+background-repeat: repeat | no-repeat | repeat-x | repeat-y 
 ```
 
 参数： 
 
-repeat : 　背景图像在纵向和横向上平铺（默认的）
+repeat: 背景图像在纵向和横向上平铺（默认的）
 
-no-repeat : 　背景图像不平铺
+no-repeat: 背景图像不平铺
 
-repeat-x : 　背景图像在横向上平铺
+repeat-x: 背景图像在横向上平铺
 
-repeat-y : 　背景图像在纵向平铺 
+repeat-y: 背景图像在纵向平铺 
 
 ### 背景位置(position)
 
 语法： 
 
 ```css
-background-position : length || length
+background-position: length || length
 
-background-position : position || position 
+background-position: position || position 
 ```
 
 参数： 
 
-length : 　百分数 | 由浮点数字和单位标识符组成的长度值。
-position : 　top | center | bottom | left | center | right 
+length: 百分数 | 由浮点数字和单位标识符组成的长度值。
+position: top | center | bottom | left | center | right 
 
 说明： 
 
@@ -976,13 +976,13 @@ position : 　top | center | bottom | left | center | right
 语法： 
 
 ```css
-background-attachment : scroll | fixed 
+background-attachment: scroll | fixed 
 ```
 
 参数： 
 
-scroll : 　背景图像是随对象内容滚动
-fixed : 　背景图像固定 
+scroll : 背景图像是随对象内容滚动
+fixed : 背景图像固定 
 
 ### 背景简写
 
@@ -1159,65 +1159,65 @@ specificity用一个四位的数 字串(CSS2是三位)来表示，更像四个�
 语法： 
 
 ```css
-border : border-width || border-style || border-color 
+border: border-width || border-style || border-color 
 ```
 
 边框属性—设置边框样式（border-style）
 
 边框样式用于定义页面中边框的风格，常用属性值如下：
 
-* none：没有边框即忽略所有边框的宽度（默认值）
-* solid：边框为单实线(最为常用的)
-* dashed：边框为虚线  
-* dotted：边框为点线
-* double：边框为双实线
+* none: 没有边框即忽略所有边框的宽度（默认值）
+* solid: 边框为单实线(最为常用的)
+* dashed: 边框为虚线  
+* dotted: 边框为点线
+* double: 边框为双实线
 
 #### 盒子边框写法总结表
 
 | 设置内容     | 样式属性                                                                                                 | 常用属性值                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| 上边框       | border-top-style:样式; border-top-width:宽度;border-top-color:颜色;border-top:宽度 样式 颜色;              |                                                            |
-| 下边框       | border-bottom-style:样式;border- bottom-width:宽度;border- bottom-color:颜色;border-bottom:宽度 样式 颜色; |                                                            |
-| 左边框       | border-left-style:样式; border-left-width:宽度;border-left-color:颜色;border-left:宽度 样式 颜色;          |                                                            |
-| 右边框       | border-right-style:样式;border-right-width:宽度;border-right-color:颜色;border-right:宽度 样式 颜色;       |                                                            |
-| 样式综合设置 | border-style:上边 [右边 下边 左边];                                                                        | none无（默认）、solid单实线、dashed虚线、dotted点线、double双实线 |
-| 宽度综合设置 | border-width:上边 [右边 下边 左边];                                                                        | 像素值                                                      |
-| 颜色综合设置 | border-color:上边 [右边 下边 左边];                                                                        | 颜色值、#十六进制、rgb(r,g,b)、rgb(r%,g%,b%)                   |
-| 边框综合设置 | border:四边宽度 四边样式 四边颜色;                                                                          |                                                             |
+| 上边框       | border-top-style: 样式; border-top-width: 宽度;border-top-color: 颜色;border-top: 宽度 样式 颜色;              |                                                            |
+| 下边框       | border-bottom-style: 样式;border- bottom-width: 宽度;border- bottom-color:颜色;border-bottom: 宽度 样式 颜色; |                                                            |
+| 左边框       | border-left-style: 样式; border-left-width: 宽度;border-left-color: 颜色;border-left: 宽度 样式 颜色;          |                                                            |
+| 右边框       | border-right-style: 样式;border-right-width: 宽度;border-right-color: 颜色;border-right: 宽度 样式 颜色;       |                                                            |
+| 样式综合设置 | border-style: 上边 [右边 下边 左边];                                                                        | none无（默认）、solid单实线、dashed虚线、dotted点线、double双实线 |
+| 宽度综合设置 | border-width: 上边 [右边 下边 左边];                                                                        | 像素值                                                      |
+| 颜色综合设置 | border-color: 上边 [右边 下边 左边];                                                                        | 颜色值、#十六进制、rgb(r,g,b)、rgb(r%,g%,b%)                   |
+| 边框综合设置 | border: 四边宽度 四边样式 四边颜色;                                                                          |                                                             |
 
 #### 表格的细线边框
 
-table{ border-collapse:collapse; }  collapse 单词是合并的意思
+table{ border-collapse: collapse; }  collapse 单词是合并的意思
 
-border-collapse:collapse; 表示边框合并在一起。
+border-collapse: collapse; 表示边框合并在一起。
 
 ### 内边距（padding）
 
 padding属性用于设置内边距。  是指 边框与内容之间的距离。
 
-* padding-top:上内边距
-* padding-right:右内边距
-* padding-bottom:下内边距
-* padding-left:左内边距
+* padding-top: 上内边距
+* padding-right: 右内边距
+* padding-bottom:下 内边距
+* padding-left: 左内边距
 
 >注意：后面跟几个数值表示的意思是不一样的。
 
 | 值的个数  | 表达意思                                                                                                            |
 |----------|-------------------------------------------------------------------------------------------------------------------|
-| 1个值    | padding：上下左右边距 比如padding: 3px; 表示上下左右都是3像素                                                            |
+| 1个值    | padding: 上下左右边距 比如padding: 3px; 表示上下左右都是3像素                                                            |
 | 2个值    | padding: 上下边距 左右边距 比如 padding: 3px 5px; 表示 上下3像素 左右 5像素                                               |
-| 3个值    | padding：上边距 左右边距 下边距 比如 padding: 3px 5px 10px; 表示 上是3像素 左右是5像素 下是10像素                            |
+| 3个值    | padding: 上边距 左右边距 下边距 比如 padding: 3px 5px 10px; 表示 上是3像素 左右是5像素 下是10像素                            |
 | 4个值    | padding:上内边距 右内边距 下内边距 左内边距 比如: padding: 3px 5px 10px 15px; 表示 上3px 右是5px 下 10px 左15px   **顺时针** |
 
 ### 外边距（margin）
 
 margin属性用于设置外边距。  设置外边距会在元素之间创建“空白”， 这段空白通常不能放置其他内容。
 
-* margin-top:上外边距
-* margin-right:右外边距
-* margin-bottom:下外边距
-* margin-left:上外边距
-* margin:上外边距 右外边距  下外边距  左外边
+* margin-top: 上外边距
+* margin-right: 右外边距
+* margin-bottom: 下外边距
+* margin-left: 上外边距
+* margin: 上外边距 右外边距  下外边距  左外边
 
 取值顺序跟内边距相同。
 
@@ -1233,7 +1233,7 @@ margin属性用于设置外边距。  设置外边距会在元素之间创建“
 实际工作中常用这种方式进行网页布局，示例代码如下：
 
 ```css
-.header{ width:960px; margin:0 auto;}
+.header{ width: 960px; margin: 0 auto;}
 ```
 
 #### 文字盒子居中图片和背景区别
@@ -1274,8 +1274,8 @@ aside {
 
 ~~~css
 * {
-   padding:0;         /* 清除内边距 */
-   margin:0;          /* 清除外边距 */
+   padding: 0;         /* 清除内边距 */
+   margin: 0;          /* 清除外边距 */
 }
 ~~~
 
@@ -1304,7 +1304,7 @@ aside {
 解决方案：
 
 1. 可以为父元素定义1像素的上边框或上内边距。
-2. 可以为父元素添加overflow:hidden。
+2. 可以为父元素添加overflow: hidden。
 
 ### content宽度和高度
 
@@ -1409,7 +1409,7 @@ html语言当中另外一个相当重要的概念------普通流（标准流）�
 在CSS中，通过float属性来定义浮动，其基本语法格式如下：
 
 ```css
-选择器 {float:属性值;}
+选择器 {float: 属性值;}
 ```
 
 | 属性值 | 描述                 |
@@ -1461,7 +1461,7 @@ html语言当中另外一个相当重要的概念------普通流（标准流）�
 在CSS中，clear属性用于清除浮动，其基本语法格式如下：
 
 ```css
-选择器 {clear:属性值;}
+选择器 {clear: 属性值;}
 ```
 
 | 属性值 | 描述                                 |
@@ -1473,7 +1473,7 @@ html语言当中另外一个相当重要的概念------普通流（标准流）�
 #### 额外标签法
 
 ```html
-W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <div style=”clear:both”></div>
+W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <div style=”clear: both”></div>
 或则其他标签br等亦可。
 ```
 
@@ -1486,7 +1486,7 @@ W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <
 可以通过触发BFC的方式，可以实现清除浮动效果。（BFC后面讲解）
 
 ```css
-可以给父级添加： overflow为 hidden|auto|scroll  都可以实现。
+可以给父级添加：overflow为 hidden|auto|scroll  都可以实现。
 ```
 
 优点：代码简洁
@@ -1563,13 +1563,13 @@ content:"."  里面尽量跟一个小点，或者其他，尽量不要为空，�
 
 <img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-11_23-00-00.jpg" width = "50%">
 
-比如:<a href="http://www.mi.com" target="_blank"> 小米官网 </a>
+比如: <a href="http://www.mi.com" target="_blank"> 小米官网 </a>
 
 ### 通栏平均分布型
 
 <img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-11_23-03-00.jpg" width = "50%">
 
-比如:<a href="http://www.smartisan.com/" target="_blank"> 锤子官网 </a>
+比如: <a href="http://www.smartisan.com/" target="_blank"> 锤子官网 </a>
 
 ## 定位(position)
 
@@ -1611,7 +1611,7 @@ PS: 定位是我们CSS算是数一数二难点的了，但是，你务必要学�
 在CSS中，position属性用于定义元素的定位模式，其基本语法格式如下：
 
 ```css
-选择器 {position:属性值;}
+选择器 {position: 属性值;}
 ```
 
 position属性的常用值
@@ -1754,7 +1754,7 @@ ie6等低版本浏览器不支持固定定位。
 
 display 设置或检索对象是否及如何显示。
 
-display : none 隐藏对象 与它相反的是 display:block 除了转换为块级元素之外，同时还有显示元素的意思。
+display: none 隐藏对象 与它相反的是 display: block 除了转换为块级元素之外，同时还有显示元素的意思。
 
 特点：**隐藏之后，不再保留位置**。
 
@@ -1762,20 +1762,20 @@ display : none 隐藏对象 与它相反的是 display:block 除了转换为块�
 
 设置或检索是否显示对象。
 
-visible : 对象可视
+visible: 对象可视
 
-hidden : 对象隐藏
+hidden: 对象隐藏
 
-特点： **隐藏之后，继续保留原有位置**。
+特点：**隐藏之后，继续保留原有位置**。
 
 ### overflow 溢出
 
 检索或设置当对象的内容超过其指定高度及宽度时如何管理内容。
 
-visible : 不剪切内容也不添加滚动条。
+visible: 不剪切内容也不添加滚动条
 
-auto : 超出自动显示滚动条，不超出不显示滚动条
+auto: 超出自动显示滚动条，不超出不显示滚动条
 
-hidden : 不显示超过对象尺寸的内容，超出的部分隐藏掉
+hidden: 不显示超过对象尺寸的内容，超出的部分隐藏掉
 
-scroll : 不管超出内容否，总是显示滚动条
+scroll: 不管超出内容否，总是显示滚动条

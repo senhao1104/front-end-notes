@@ -3,24 +3,30 @@
     margin: 0;
     padding: 0
 }
+
 /*让所有斜体 不倾斜*/
 em,
 i {
     font-style: normal;
 }
+
 /*去掉列表前面的小点*/
 li {
     list-style: none;
 }
+
 /*图片没有边框   去掉图片底侧的空白缝隙*/
 img {
-    border: 0;  /*ie6*/
+    border: 0;
+    /*ie6*/
     vertical-align: middle;
 }
+
 /*让button 按钮 变成小手*/
 button {
     cursor: pointer;
 }
+
 /*取消链接的下划线*/
 a {
     color: #666;
@@ -46,6 +52,7 @@ body {
 .none {
     display: none;
 }
+
 /*清除浮动*/
 .clearfix:after {
     visibility: hidden;
@@ -58,4 +65,3 @@ body {
 .clearfix {
     *zoom: 1
 }
-
