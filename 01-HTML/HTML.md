@@ -228,8 +228,7 @@ HTML页面也成为HTML文档。
 1. br是个单标签。
 2. br标签只是简单地开始新的一行，与段落不同，段落之间会插入一些垂直的间距。
 
-练习案例：<a href = “https://github.com/senhao1104/front-end-notes/blob/master/01-HTML/HTML%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/01-%E4%BD%93%E8%82%B2%E6%96%B0%E9%97%BB.html”> 体育新闻 </a>
-
+>练习案例：[体育新闻](https://github.com/senhao1104/front-end-notes/blob/master/01-HTML/HTML%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/01-%E4%BD%93%E8%82%B2%E6%96%B0%E9%97%BB.html)
 ### 文本格式化标签
 
 在网页中，有时需要为文字设置粗体、斜体或下划线效果，这时就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。
@@ -325,7 +324,7 @@ span, 跨度，跨距；范围
 5. 不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。
 
 ```html
-<a href="http:// www.baidu.com"><img src="baidu.jpg" />></a >
+<a href="http:// www.baidu.com"><img src="baidu.jpg" /></a >
 ```
 
 ### 锚点定位
