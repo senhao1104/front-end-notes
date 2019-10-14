@@ -13,8 +13,7 @@ CSS以HTML为基础，提供了丰富的功能，如字体、颜色、背景的�
 
 ## CSS样式规则
 
-使用HTML时，需要遵从一定的规范。CSS亦如此，要想熟练地使用CSS对网页进行修饰，首先需要了解CSS样式规则，具体格式如下：                                          
-
+使用HTML时，需要遵从一定的规范。CSS亦如此，要想熟练地使用CSS对网页进行修饰，首先需要了解CSS样式规则，具体格式如下：                                     
 <img src = "https://github.com/senhao114/front-end-notes/blob/master/99-images/2019-10-10_20-43-00.png" width = "60%">
 
 在上面的样式规则中:
@@ -1473,7 +1472,7 @@ html语言当中另外一个相当重要的概念------普通流（标准流）�
 #### 额外标签法
 
 ```html
-W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <div style=”clear: both”></div>
+W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <div style="clear: both"></div>
 或则其他标签br等亦可。
 ```
 
